@@ -1,0 +1,128 @@
+:root {
+  --area-color: #f8e0c9;
+  --table-area-color: #fff;
+  --color: #005698;
+  --border-first-color: #bbb;
+  --border-second-color: #005698;
+  /* --arrow-color: #005698; */
+  --btn-border-fill: #005698;
+  --btn-border-empty: rgb(192, 192, 192);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--area-color);
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.slider {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.slider .container {
+  width: 100%;
+  float: left;
+}
+
+.slider .item {
+  /* height: 250px; */
+  /* background-color: grey; */
+  /* line-height: 250px; */
+  text-align: center;
+  /* font-size: 50px; */
+  /* color: #fff; */
+  float: left;
+}
+
+/* ==TEXT==================================== */
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--color);
+  margin-bottom: 50px;
+}
+
+/* ==TABLE=========================================== */
+
+.table {
+  background-color: var(--table-area-color);
+  border-collapse: collapse;
+  /* margin: 25px 0; */
+  font-size: 0.9rem;
+  width: 100%;
+  /* margin: auto 20px; */
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.table thead tr {
+  background-color: var(--color);
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th {
+  padding: 12px 15px;
+  color: #fff;
+}
+
+.table td {
+  padding: 12px 15px;
+  color: #000;
+}
+
+.table tbody {
+  border-radius: 5px;
+}
+
+.table tbody tr {
+  border: 1px solid var(--border-first-color);
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--border-second-color);
+}
+
+.table tbody tr .active-col {
+  font-weight: bold;
+  color: var(--color);
+}
+
+/* ==BUTTONS======================================== */
+
+.btn {
+  background-color: var(--btn-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--btn-border-empty);
+  color: var(--color);
+  cursor: not-allowed;
+}
